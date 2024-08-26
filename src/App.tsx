@@ -11,7 +11,7 @@ import ECommerce from './pages/Dashboard/ECommerce';
 import FormElements from './pages/Form/FormElements';
 // import FormLayout from './pages/Form/FormLayout';
 import Profile from './pages/Profile';
-import Payment from './components/Payment/Payment';
+import Payment from "./components/Payment/Payment"
 import Settings from './pages/Settings';
 import Tables from './pages/Tables';
 import Alerts from './pages/UiElements/Alerts';
@@ -83,7 +83,7 @@ function App() {
           }
         />
 
-        {/* <Route
+        <Route
           path="/cf-gallery"
           element={
             <>
@@ -91,7 +91,7 @@ function App() {
               <CfGallery />
             </>
           }
-        /> */}
+        />
         <Route
           path="/profile"
           element={
