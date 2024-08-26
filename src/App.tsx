@@ -5,11 +5,13 @@ import PageTitle from './components/PageTitle';
 import SignIn from './pages/Authentication/SignIn';
 import SignUp from './pages/Authentication/SignUp';
 import Calendar from './pages/Calendar';
+import CfGallery from './pages/CfGallery';
 import Chart from './pages/Chart';
 import ECommerce from './pages/Dashboard/ECommerce';
 import FormElements from './pages/Form/FormElements';
 // import FormLayout from './pages/Form/FormLayout';
 import Profile from './pages/Profile';
+import Payment from './components/Payment/Payment';
 import Settings from './pages/Settings';
 import Tables from './pages/Tables';
 import Alerts from './pages/UiElements/Alerts';
@@ -35,7 +37,6 @@ import Clone from './pages/Banks/Clone';
 import Burners from './pages/Banks/Burners';
 import Dumps from './pages/Banks/Dumps';
 
-
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
   const { pathname } = useLocation();
@@ -53,7 +54,6 @@ function App() {
   ) : (
     <DefaultLayout>
       <Routes>
-        
         <Route
           index
           element={
@@ -72,6 +72,26 @@ function App() {
             </>
           }
         />
+
+        <Route
+          path="/payment"
+          element={
+            <>
+              <PageTitle title="Payment" />
+              <Payment />
+            </>
+          }
+        />
+
+        {/* <Route
+          path="/cf-gallery"
+          element={
+            <>
+              <PageTitle title="CF Gallery" />
+              <CfGallery />
+            </>
+          }
+        /> */}
         <Route
           path="/profile"
           element={
